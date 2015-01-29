@@ -5,9 +5,9 @@
 class Motor {
 	public:
 		Motor();
-		void stop();
-		void idz();
-		void idzteVeDvu();
+		void stop(int number);
+		void idz(int number, int dir, int speed);
+		void idzteVeDvu(int number1, int number2, int dir, int speed);
 };
 
 

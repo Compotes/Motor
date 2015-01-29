@@ -1,5 +1,5 @@
 #include "Arduino.h"
-
+#include "Motor.h"
 Motor::Motor() {
 	pinMode(2, OUTPUT);
 	pinMode(3, OUTPUT);
@@ -26,7 +26,7 @@ void Motor::idz(int number, int dir, int speed) {
 		analogWrite(number * 2, speed);
 		analogWrite(number * 2 + 1, 0);
 	} else {
-		analodWrite(number * 2, 0);
+		analogWrite(number * 2, 0);
 		analogWrite(number * 2 + 1, speed);
 	}
 }
