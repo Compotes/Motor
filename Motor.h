@@ -5,7 +5,7 @@
 class Motor {
 	public:
 		Motor();
-		void stop(int number, int mils);
+		void stop(int number);
 		void idz(int number, int dir, int speed);
 		void kolecko(int dir, int speed);
 		void idzteVeDvu(int number1, int number2, int dir, int speed);
