@@ -34,11 +34,11 @@ void Motor::idz(int number, int dir, int speed) {
 
 void Motor::idzteVeDvu(int number1, int number2, int dir, int speed) { 
 	if(dir == 1) {
-        Motor::idz(number1, 1, speed);
-        Motor::idz(number2, 0, speed);
+            Motor::idz(number1, 1, speed);
+            Motor::idz(number2, 0, speed);
 	} else {
-        Motor::idz(number1, 0, speed);
-        Motor::idz(number2, 1, speed);
+            Motor::idz(number1, 0, speed);
+            Motor::idz(number2, 1, speed);
 	}
 }
 
