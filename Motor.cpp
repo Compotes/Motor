@@ -16,9 +16,10 @@ Motor::Motor() {
 }
 
 
-void Motor::stop(int number) {
+void Motor::stop(int number, int mils) {
 	analogWrite(number * 2, 0);
-	analogWrite(number * 2 + 1, 0);	
+	analogWrite(number * 2 + 1, 0);
+    delay(mils);
 }
 
 
