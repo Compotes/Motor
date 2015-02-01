@@ -17,7 +17,7 @@ Motor::Motor() {
 
 void Motor::stop(int number, int number2, int number3, int number4) {
     int arr[] = {number, number2, number3, number4};
-    for(int i = 0; i < sizeof(arr) / sizeof(*arr); i++) {
+    for (int i = 0; i < sizeof(arr) / sizeof(*arr); i++) {
         analogWrite(arr[i] * 2, 0);
         analogWrite(arr[i] * 2 + 1, 0);
     }
