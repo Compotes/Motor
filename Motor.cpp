@@ -15,12 +15,13 @@ Motor::Motor() {
 	pinMode(9, OUTPUT);
 }
 
-
-void Motor::stop(int number) {
-	analogWrite(number * 2, 0);
-	analogWrite(number * 2 + 1, 0);
+void Motor::stop(int number, int number2, int number3, int number4) {
+    int arr[] = {number, number2, number3, number4};
+    for (int i = 0; i < sizeof(arr) / sizeof(*arr); i++) {
+        analogWrite(arr[i] * 2, 0);
+        analogWrite(arr[i] * 2 + 1, 0);
+    }
 }
-
 
 void Motor::idz(int number, int dir, int speed) {
 	if(dir == 1) {
