@@ -1,0 +1,5 @@
+Motor	KEYWORD1
+stop	KEYWORD2
+go_pair	KEYWORD2
+rotate	KEYWORD2
+go	KEYWORD2

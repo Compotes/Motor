@@ -1,5 +1,0 @@
-Motor	KEYWORD1
-idz		KEYWORD2
-idzteVeDvu		KEYWORD2
-stop	KEYWORD2
-kolecko		KEYWORD2
