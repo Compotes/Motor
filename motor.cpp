@@ -1,5 +1,5 @@
 #include "Arduino.h"
-#include "Motor.h"
+#include "motor.h"
 
 Motor::Motor() {
 	pinMode(2, OUTPUT);
@@ -24,7 +24,7 @@ void Motor::stop(int number, int number2, int number3, int number4) {
 }
 
 void Motor::idz(int number, int dir, int speed) {
-	if(dir == 1) {
+	if (dir == 1) {
 		analogWrite(number * 2, speed);
 		analogWrite(number * 2 + 1, 0);
 	} else {
@@ -34,7 +34,7 @@ void Motor::idz(int number, int dir, int speed) {
 }
 
 void Motor::idzteVeDvu(int number1, int number2, int dir, int speed) { 
-	if(dir == 1) {
+	if (dir == 1) {
             Motor::idz(number1, 1, speed);
             Motor::idz(number2, 0, speed);
 	} else {
@@ -44,8 +44,8 @@ void Motor::idzteVeDvu(int number1, int number2, int dir, int speed) {
 }
 
 void Motor::kolecko(int dir, int speed) {
-	for(int i = 1; i < 5; i++) {
-		if(dir == 1) {
+	for (int i = 1; i < 5; i++) {
+		if (dir == 1) {
 			analogWrite(i * 2, speed);
 			analogWrite(i * 2 + 1, 0);
 		} else {
