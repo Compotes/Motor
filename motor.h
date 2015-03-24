@@ -3,6 +3,10 @@
 
 #include "Arduino.h"
 
+
+#define MOTOR_FORWARD 0
+#define MOTOR_BACKWARD 1
+
 class Motor {
     public:
         Motor();
