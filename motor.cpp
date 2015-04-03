@@ -23,7 +23,15 @@ void Motor::stop(int motor, int motor2, int motor3, int motor4) {
     }
 }
 
+void Motor::go_all(int speeds[], int directions[]) {
+    for (int i = 1; i <= MOTOR_NUM ; i++)
+        go(i, directions[i - 1], speed[i - 1]);
+}
+
 void Motor::go(int motor, int dir, int speed) {
+    if (speed < 0)
+        speed = 0;
+
     if (dir == 1) {
         analogWrite(motor * 2, speed);
         analogWrite(motor * 2 + 1, 0);
@@ -35,15 +43,18 @@ void Motor::go(int motor, int dir, int speed) {
 
 void Motor::go_pair(int motor1, int motor2, int dir, int speed) {
     if (dir == 1) {
-            Motor::go(motor1, 1, speed);
-            Motor::go(motor2, 0, speed);
+            go(motor1, 1, speed);
+            go(motor2, 0, speed);
     } else {
-        Motor::go(motor1, 0, speed);
-        Motor::go(motor2, 1, speed);
+        go(motor1, 0, speed);
+        go(motor2, 1, speed);
     }
 }
 
 void Motor::rotate(int dir, int speed) {
+    if (speed < 0)
+        speed = 0;
+
     for (int i = 1; i < 5; i++) {
         if (dir == 1) {
             analogWrite(i * 2, speed);
