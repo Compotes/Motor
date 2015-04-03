@@ -4,6 +4,7 @@
 #include "Arduino.h"
 
 
+#define MOTOR_NUM 4 
 #define MOTOR_FORWARD 0
 #define MOTOR_BACKWARD 1
 
@@ -14,6 +15,7 @@ class Motor {
         void go(int motor, int dir, int speed);
         void rotate(int dir, int speed);
         void go_pair(int motor1, int motor2, int dir, int speed);
+        void go_all(int speeds[], int directions[]);
 };
 
 
