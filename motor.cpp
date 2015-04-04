@@ -25,7 +25,7 @@ void Motor::stop(int motor, int motor2, int motor3, int motor4) {
 
 void Motor::go_all(int speeds[], int directions[]) {
     for (int i = 1; i <= MOTOR_NUM ; i++)
-        go(i, directions[i - 1], speed[i - 1]);
+        go(i, directions[i - 1], speeds[i - 1]);
 }
 
 void Motor::go(int motor, int dir, int speed) {
